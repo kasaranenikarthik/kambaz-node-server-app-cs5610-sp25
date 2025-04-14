@@ -46,6 +46,7 @@ export default function UserRoutes(app) {
     const currentUser = await dao.findUserById(userId);
     res.json(currentUser);
   };
+
   const signup = async (req, res) => { 
     const user = await dao.findUserByUsername(req.body.username);
     if (user) {
@@ -69,11 +70,11 @@ export default function UserRoutes(app) {
     }
   };
 
-
   const signout = (req, res) => {
     req.session.destroy();
     res.sendStatus(200);
    };
+
   const profile = (req, res) => {
     const currentUser = req.session["currentUser"];
     if (!currentUser) {
@@ -82,6 +83,7 @@ export default function UserRoutes(app) {
     }
     res.json(currentUser);
    };
+
    const findCoursesForEnrolledUser = (req, res) => {
     let { userId } = req.params;
     if (userId === "current") {
