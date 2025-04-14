@@ -18,10 +18,6 @@ export default function UserRoutes(app) {
     const currentUser = req.session["currentUser"];
     console.log("Current User: ", currentUser);
     const { role, name } = req.query;
-    if (!currentUser) {
-      res.status(401).json({ message: "Unauthorized" });
-      return;
-    }
     if (role) {
       const users = await dao.findUsersByRole(role); 
       res.json(users); 
