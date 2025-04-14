@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import Hello from './Hello.js';
 import Lab5 from './Lab5/index.js';
 import UserRoutes from "./Kambaz/Users/routes.js";
@@ -30,6 +31,10 @@ if (process.env.NODE_ENV !== 'development') {
 }
 app.use(session(sessionOptions))
 app.use(express.json());
+
+const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || 'mongodb://localhost:27017/kambaz';
+mongoose.connect(CONNECTION_STRING);
+
 Hello(app);
 Lab5(app);
 UserRoutes(app);
