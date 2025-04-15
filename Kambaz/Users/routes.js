@@ -109,7 +109,7 @@ export default function UserRoutes(app) {
     try {
     const currentUser = req.session["currentUser"];
     const newCourse = courseDao.createCourse(req.body);
-    enrollmentDao.enrollUserInCourse(currentUser._id, newCourse._id);
+    enrollmentsDao.enrollUserInCourse(currentUser._id, newCourse._id);
     res.json(newCourse);
     } catch (e) {
       res.status(400).json({ message: "Unable to create course" });
