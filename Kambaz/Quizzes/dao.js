@@ -31,3 +31,8 @@ export async function unPublishQuiz(courseId, quizId) {
     }
     return await model.findById(quizId);;
 }
+
+export async function findQuizById(cid, quizId) {
+    const quiz = await model.find({ _id: quizId, course: cid });
+    return quiz;
+}

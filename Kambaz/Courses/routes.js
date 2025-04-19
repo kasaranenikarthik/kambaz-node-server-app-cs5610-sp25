@@ -90,6 +90,16 @@ export default function CourseRoutes(app) {
     res.json(quizzes);
   });
 
+  app.get("/api/courses/:cid/quiz/:qid/details", async (req, res) => {
+    const {cid, qid } = req.params;
+    const quizDetails = await quizzesDao.findQuizById(cid, qid);
+    if (quizDetails.length === 1) {
+      res.json(quizDetails[0]);
+    } else {
+      res.status(404).send("Duplicate or no Quiz not found");
+    }
+  });
+
   app.get("/api/courses/:cid/quiz/:qid", async (req, res) => {
     const {cid, qid } = req.params;
     const questions = await quizQuestionsDao.fetchQuizQuestions(qid);
@@ -108,6 +118,7 @@ export default function CourseRoutes(app) {
     res.json(status);
   });
 
+  
 
 }
 
