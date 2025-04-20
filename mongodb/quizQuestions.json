@@ -1,0 +1,70 @@
+[
+  {
+    "_id": "qq1",
+    "quiz": "quiz1",
+    "question": "The sky is blue.",
+    "correctAnswer": "True",
+    "type": "TRUE_FALSE",
+    "points":1,
+    "isEditing":false
+  },
+  {
+    "_id": "qq2",
+    "quiz": "quiz1",
+    "question": "What is the capital of France?",
+    "answer": "Paris",
+    "type": "MULTIPLE_CHOICE",
+    "points":1,
+    "isEditing":false,
+    "options": [
+      "Paris",
+      "London",
+      "Berlin",
+      "Madrid"
+    ],
+    "correctAnswer": "Paris"
+
+  },
+  {
+    "_id": "qq3",
+    "quiz": "quiz1",
+    "question": "The chemical symbol for water is ____.",
+    "correctAnswer": "H2O",
+    "type": "FILL_IN_BLANK",
+    "points":1,
+    "isEditing":false
+  },
+  {
+    "_id": "qq4",
+    "quiz": "quiz2",
+    "question": "2 + 2 equals 4.",
+    "correctAnswer": "True",
+    "type": "TRUE_FALSE",
+    "points":1,
+    "isEditing":false
+  },
+  {
+    "_id": "qq5",
+    "quiz": "quiz2",
+    "question": "Which of the following is a mammal?\nA. Shark\nB. Whale\nC. Octopus\nD. Lobster",
+    "type": "MULTIPLE_CHOICE",
+    "points":1,
+    "isEditing":false,
+    "options": [
+      "Shark",
+      "Whale",
+      "Octopus",
+      "Lobster"
+    ],
+    "correctAnswer": "Whale"
+  },
+  {
+    "_id": "qq6",
+    "quiz": "quiz2",
+    "question": "The largest planet in our solar system is ____.",
+    "correctAnswer": "Jupiter",
+    "type": "FILL_IN_BLANK",
+    "points":1,
+    "isEditing":false
+  }
+]  

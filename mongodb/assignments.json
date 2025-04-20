@@ -1,0 +1,39 @@
+[
+  { "_id": "A101", "title": "A1 - ENV + HTML", "course": "CS1234", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of "},
+  { "_id": "A102", "title": "Combustion Analysis", "course": "CS1234","available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A103", "title": "Nozzle Design Project", "course": "CS1234", "available": "2025-05-22 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+
+  { "_id": "A201", "title": "Aerodynamics Quiz", "course": "CS5100", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A202", "title": "Flow Analysis", "course": "CS5100", "available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A203", "title": "Heating Analysis", "course": "CS5100", "available": "2025-05-06 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+
+  { "_id": "A301", "title": "Structural Design Task", "course": "CS5010", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A302", "title": "Orbital Calculations", "course": "CS5010", "available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A303", "title": "Systems Engineering Exam", "course": "CS5010", "available": "2025-05-06 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  
+  
+  { "_id": "A401", "title": "Structural Design Task", "course": "CS5150", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A402", "title": "Orbital Calculations", "course": "CS5150", "available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A403", "title": "Systems Engineering Exam", "course": "CS5150", "available": "2025-05-06 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  
+  
+  { "_id": "A501", "title": "Structural Design Task", "course": "CS5800", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A502", "title": "Orbital Calculations", "course": "CS5800", "available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A503", "title": "Systems Engineering Exam", "course": "CS5800", "available": "2025-05-06 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  
+  
+  { "_id": "A601", "title": "Structural Design Task", "course": "CS5610", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A602", "title": "Orbital Calculations", "course": "CS5610", "available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A603", "title": "Systems Engineering Exam", "course": "CS5610", "available": "2025-05-06 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  
+  
+  { "_id": "A701", "title": "Structural Design Task", "course": "CS5200", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A702", "title": "Orbital Calculations", "course": "CS5200", "available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A703", "title": "Systems Engineering Exam", "course": "CS5200", "available": "2025-05-06 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  
+  
+  { "_id": "A801", "title": "Structural Design Task", "course": "RS108", "available": "2025-05-06 00:00:00", "due":"2025-05-13 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A802", "title": "Orbital Calculations", "course": "RS108", "available": "2025-05-14 00:00:00", "due":"2025-05-21 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " },
+  { "_id": "A803", "title": "Systems Engineering Exam", "course": "RS108", "available": "2025-05-06 00:00:00", "due":"2025-05-29 23:59:00", "points":"100", "description":"The assignment is available online Submit a link to the landing page of " }
+  
+]
