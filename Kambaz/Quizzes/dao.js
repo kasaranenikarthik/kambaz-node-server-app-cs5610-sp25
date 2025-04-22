@@ -37,7 +37,7 @@ export async function findQuizById(cid, quizId) {
     return quiz;
 }
 
-export async function createQuiz(quiz) {
+export async function createQuiz(cid, qid, quiz) {
     const newQuiz = await model.create(quiz);
     return newQuiz;
 }

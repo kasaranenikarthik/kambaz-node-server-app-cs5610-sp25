@@ -6,7 +6,7 @@ export async function fetchQuizQuestions(quizId) {
 }
 
 export async function createQuizQuestion(quizQuestion) {
-    console.log("quizQuestion", quizQuestion);
+    //console.log("quizQuestion", quizQuestion);
     const newQuizQuestion = await model.create(quizQuestion);
     return newQuizQuestion;
 }

@@ -114,6 +114,11 @@ export default function CourseRoutes(app) {
 
   app.post("/api/courses/:cid/quiz/:qid", async (req, res) => {
     const {cid, qid } = req.params;
+    const quiz = await quizzesDao.findQuizById(cid, qid);
+    if (quiz.length !== 0) {
+      res.status(400).send("Quiz already exists");
+      return;
+    }
     const newQuiz = await quizzesDao.createQuiz(cid, qid, req.body);
     res.json(newQuiz);
   });
