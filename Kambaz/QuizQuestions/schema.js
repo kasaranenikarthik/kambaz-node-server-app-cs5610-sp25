@@ -6,7 +6,12 @@ const quizSchema = new mongoose.Schema(
     quiz: { type: String, ref: "QuizModel"},
     question: String,
     answer: String,
-    type: String, 
+    type: String,
+    course: { type: String, ref: "CourseModel"},
+    points: Number,
+    isEditing: Boolean,
+    options: [],
+    correctAnswer: String,
   }, 
   { collection: "quizQuestions" } 
  ); 

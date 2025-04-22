@@ -106,6 +106,18 @@ export default function CourseRoutes(app) {
     res.json(questions);
   });
 
+  app.put("/api/courses/:cid/quiz/:qid", async (req, res) => {
+    const {cid, qid } = req.params;
+    const updatedQuiz = await quizzesDao.updateQuiz(cid, qid, req.body);
+    res.json(updatedQuiz);
+  });
+
+  app.post("/api/courses/:cid/quiz/:qid", async (req, res) => {
+    const {cid, qid } = req.params;
+    const newQuiz = await quizzesDao.createQuiz(cid, qid, req.body);
+    res.json(newQuiz);
+  });
+
   app.post("/api/courses/:cid/quiz/:qid/publish", async (req, res) => {
     const { cid, qid } = req.params;
     const q = await quizzesDao.publishQuiz(cid, qid);
@@ -117,6 +129,25 @@ export default function CourseRoutes(app) {
     const status = await quizzesDao.unPublishQuiz(cid, qid);
     res.json(status);
   });
+
+  app.post("/api/courses/:cid/quiz/:qid/questions", async (req, res) => {
+    const { cid, qid } = req.params;
+    const newQuizQuestion = await quizQuestionsDao.createQuizQuestion(req.body);
+    res.json(newQuizQuestion);
+  });
+
+  app.put("/api/courses/:cid/quiz/:qid/questions/:questionId", async (req, res) => {
+    const { cid, qid, questionId } = req.params;
+    const updatedQuizQuestion = await quizQuestionsDao.updateQuizQuestion(cid, qid, questionId, req.body);
+    res.json(updatedQuizQuestion);
+  });
+
+  app.delete("/api/courses/:cid/quiz/:qid/questions/:questionId", async (req, res) => {
+    const { cid, qid, questionId } = req.params;
+    const status = await quizQuestionsDao.deleteQuizQuestion(cid, qid, questionId);
+    res.json(status);
+  });
+  
 
   
 

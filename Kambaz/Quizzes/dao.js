@@ -36,3 +36,13 @@ export async function findQuizById(cid, quizId) {
     const quiz = await model.find({ _id: quizId, course: cid });
     return quiz;
 }
+
+export async function createQuiz(quiz) {
+    const newQuiz = await model.create(quiz);
+    return newQuiz;
+}
+
+export async function updateQuiz(cid, quizId, updatedQuiz) {
+    const uQuiz = await model.updateOne({_id: quizId, course: cid }, { $set: updatedQuiz });
+    return uQuiz;
+}
