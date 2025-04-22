@@ -123,6 +123,12 @@ export default function CourseRoutes(app) {
     res.json(newQuiz);
   });
 
+  app.delete("/api/courses/:cid/quiz/:qid", async (req, res) => {
+    const { cid, qid } = req.params;
+    const status = await quizzesDao.deleteQuiz(cid, qid);
+    res.json(status);
+  });
+
   app.post("/api/courses/:cid/quiz/:qid/publish", async (req, res) => {
     const { cid, qid } = req.params;
     const q = await quizzesDao.publishQuiz(cid, qid);

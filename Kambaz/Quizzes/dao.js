@@ -46,3 +46,8 @@ export async function updateQuiz(cid, quizId, updatedQuiz) {
     const uQuiz = await model.updateOne({_id: quizId, course: cid }, { $set: updatedQuiz });
     return uQuiz;
 }
+
+export async function deleteQuiz(cid, quizId) {
+    const deletedQuiz = await model.deleteOne({ _id: quizId, course: cid });
+    return deletedQuiz;
+}
