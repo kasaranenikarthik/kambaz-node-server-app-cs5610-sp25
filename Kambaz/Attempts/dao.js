@@ -13,7 +13,7 @@ export function findAttemptbyId(attemptId) {
 }
 
 export function fetchAttempt(cid, qid, userId) {
-    console.log("fetchAttempt: ", cid, qid, userId);
+    //console.log("fetchAttempt: ", cid, qid, userId);
     return model.find({ course: cid, quiz: qid, user: userId });
 }
 

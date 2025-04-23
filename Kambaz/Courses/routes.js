@@ -150,6 +150,8 @@ export default function CourseRoutes(app) {
 
   app.put("/api/courses/:cid/quiz/:qid/questions/:questionId", async (req, res) => {
     const { cid, qid, questionId } = req.params;
+    console.log("questionId: ", questionId);
+    console.log("req.body: ", req.body);
     const updatedQuizQuestion = await quizQuestionsDao.updateQuizQuestion(cid, qid, questionId, req.body);
     res.json(updatedQuizQuestion);
   });

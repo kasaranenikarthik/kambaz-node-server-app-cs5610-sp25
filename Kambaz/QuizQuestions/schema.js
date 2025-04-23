@@ -5,7 +5,6 @@ const quizSchema = new mongoose.Schema(
     _id: String, 
     quiz: { type: String, ref: "QuizModel"},
     question: String,
-    answer: String,
     type: String,
     course: { type: String, ref: "CourseModel"},
     points: Number,
