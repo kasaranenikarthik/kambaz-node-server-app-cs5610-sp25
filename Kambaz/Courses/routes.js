@@ -167,7 +167,7 @@ export default function CourseRoutes(app) {
   });
 
   app.get("/api/courses/:cid/quiz/:qid/attempts/:userId", async (req, res) => {
-    console.log("get all attempts: ", req.params);
+    //console.log("get all attempts: ", req.params);
     const { cid, qid, userId} = req.params;
     const response = await attemptsDao.fetchAttempt(cid, qid, userId);
     res.json(response);
