@@ -17,7 +17,7 @@ app.use(cors({
 }));
 
 const sessionOptions = {
-    secret: process.env.SESSIOn_SECRET || "kambaz",
+    secret: process.env.SESSION_SECRET || "kambaz",
     resave: false,
     saveUninitialized: false,
 };
