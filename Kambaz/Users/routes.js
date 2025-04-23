@@ -11,7 +11,7 @@ export default function UserRoutes(app) {
 
   const findAllUsers = async (req, res) => { 
     const currentUser = req.session["currentUser"];
-    console.log("Current User: ", currentUser);
+    //console.log("Current User: ", currentUser);
     const { role, name } = req.query;
     if (role) {
       const users = await dao.findUsersByRole(role); 
@@ -83,22 +83,7 @@ export default function UserRoutes(app) {
    };
 
    const findCoursesForUser = async (req, res) => { 
-    const currentUser = req.session["currentUser"];
-    //console.log("Current User: ", currentUser); 
-    if (!currentUser) { 
-      res.sendStatus(401); 
-      return; 
-    } 
-    if (currentUser.role === "ADMIN") { 
-      const courses = await courseDao.findAllCourses(); 
-      res.json(courses); 
-      return; 
-    } 
     let { uid } = req.params;
-    //console.log("User ID: ", uid);
-    if (uid === "current") { 
-      uid = currentUser._id; 
-    } 
     const courses = await enrollmentsDao.findCoursesForUser(uid); 
     res.json(courses); 
   }; 
