@@ -4,6 +4,7 @@ import * as assignmentsDao from "../Assignments/dao.js";
 import * as enrollmentDao from "../Enrollments/dao.js";
 import * as quizzesDao from "../Quizzes/dao.js";
 import * as quizQuestionsDao from "../QuizQuestions/dao.js";
+import * as attemptsDao from "../Attempts/dao.js";
 
 export default function CourseRoutes(app) {
   app.get("/api/courses", async (req, res) => {
@@ -159,8 +160,25 @@ export default function CourseRoutes(app) {
     res.json(status);
   });
   
+  app.post("/api/courses/:cid/quiz/:qid/attempts", async (req, res) => {
+    const { cid, qid} = req.params;
+    const status = await attemptsDao.createAttempt(req.body);
+    res.json(status);
+  });
 
-  
+  app.get("/api/courses/:cid/quiz/:qid/attempts/:userId", async (req, res) => {
+    console.log("get all attempts: ", req.params);
+    const { cid, qid, userId} = req.params;
+    const response = await attemptsDao.fetchAttempt(cid, qid, userId);
+    res.json(response);
+  });
+
+  app.put("/api/courses/:cid/quiz/:qid/attempts/:attemptId", async (req, res) => {
+    const { cid, qid, attemptId} = req.params;
+    //console.log("attemptId: ", attemptId);
+    const status = await attemptsDao.updateAttempt(cid, qid, attemptId, req.body);
+    res.json(status);
+  });
 
 }
 
