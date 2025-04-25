@@ -118,11 +118,17 @@ export default function UserRoutes(app) {
     const status = await enrollmentsDao.unenrollUserFromCourse(uid, cid); 
     res.send(status); 
   }; 
+
+  const createUser = async (req, res) => { 
+    const user = await dao.createUser(req.body); 
+    res.json(user); 
+  };
   
   app.get("/api/users/:uid/courses", findCoursesForUser);
   app.post("/api/users/:uid/courses/:cid", enrollUserInCourse); 
   app.delete("/api/users/:uid/courses/:cid", unenrollUserFromCourse);
   app.get("/api/users", findAllUsers);
+  app.post("/api/users", createUser);
   app.get("/api/users/:userId", findUserById);
   app.put("/api/users", updateUser);
   app.delete("/api/users/:userId", deleteUser);

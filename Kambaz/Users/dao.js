@@ -2,9 +2,14 @@ import model from "./model.js";
 import { v4 as uuidv4 } from "uuid";
 
 export const createUser = async (user) => {
-  let users = await model.find();
+  // Check if the username already exists
+  const existingUser = await model.findOne({ username: user.username });
+  if (existingUser) {
+    res.send("Username already exists");
+  }
+
+  // If not, create a new user with a unique ID
  const newUser = { ...user, _id: uuidv4() };
- users = [...users, newUser];
  return await model.create(newUser);
 };
 
